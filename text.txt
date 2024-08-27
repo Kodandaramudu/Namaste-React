@@ -1,0 +1,47 @@
+//Important notes// 
+Package.json is configuration for npm
+There are two types of Packages or dependecies that we can install. they are
+a.Dev dependencies
+b.Normal dependecies
+
+//parcel
+"parcel": "^2.12.0" ------> Here caret(^) means parcel will automatically upgrades to minor changes if comes in..
+"parcel": "~2.12.0" ------> Here tilde(~) means parcel will automatically upgrades to major changes if comes in.
+
+//package.json and packagelock.jsson
+package.json: Describes your project and lists the dependencies you need.
+package-lock.json: Locks the exact versions of those dependencies and their dependencies to ensure consistent installations. 
+
+//node-modules
+It's a collection lot of dependecies.
+The node_modules directory is where all the dependencies (node modules) required by your project are stored. 
+Each module may also have its own dependencies, which are stored in subdirectories within node_modules.
+
+By using package.json and package-lock.json we can re install all node modules even though they are deleted.
+
+//.gitignore file
+In this file we can add the files which are not important for production.
+
+Episode 2:- I have paused video on 1 hr 12mnts left behind
+
+
+npm || npx
+npm is used to install packages like npm install 
+npx is used to execute the package like npx parcel sourcefileName
+
+CDN links
+cdn links are not a preferable way to bring React and ReactDOM into our project. 
+
+// Packages list and commands //
+
+1. npm install -D parcel ------> where D means Dev environment parcel not normal parcel which is used in production.
+
+
+// Production Built
+when we are creating production built using parcel will get an error message. To avoid that we have to remove  main in package.json
+
+// Extensions
+prettier
+Better comments
+Bracket Pair colorization
+Lint

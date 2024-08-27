@@ -1,3 +1,66 @@
-#heading {
-    color:"red";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding:2px 10px;
+    background-color: whitesmoke;
+    border:1 solid wheat;
+}
+.logo{
+    width: 50px;
+    opacity:1;
+    border: none;
+}
+
+
+.list{
+    list-style: none;
+
+}
+.nav-items > ul > li{
+    display: inline-block;
+    margin:0px 10px;
+}
+
+.cart-logo{
+    width: 30px;
+    border:none;
+
+}
+
+.search{
+    padding:1%;
+    text-align: right;
+}
+.search-input{
+    border: 0.1em solid black;
+    border-radius: 20px;
+    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpCKWTtNa51gReip8v-6LDXaMNPnLWWoKrPQ&s' ) ;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding:15px;
+}
+.store-goods-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.store-crad{
+    width:10%;
+    word-wrap: break-word;
+    margin: 1%;
+    padding: 1% 2%;
+    background:whitesmoke;
+}
+.store-crad:hover{
+    border:1 solid black;
+    cursor: pointer;
+}
+
+.store-logo{
+    width: 100%;
+}
+.btn-name:hover{
+    background:aqua;
+    cursor: pointer;
 }
