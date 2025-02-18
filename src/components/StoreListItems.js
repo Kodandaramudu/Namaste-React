@@ -1,18 +1,24 @@
-import { MENU_LOGO_URL } from "../utils/constant";
+
+import { useState } from "react";
 import Shimmer from "../utils/Shimmer";
-const StoreListItems = (props) => {
-    const { listItem } = props;
-    const { name, imageId, itemAttribute, price, description } = listItem.card.info;
+import StoreListItemsMenu from "./StoreListItemsMenu";
+
+
+const StoreListItems = ({listItem,showItems,setExpandItems}) => {
+    // console.log(listItem);
+    const listItemMenu = listItem?.card?.card?.itemCards;
+    const handleClick=()=>{
+        setExpandItems();
+    }
+    
     <Shimmer />
     return (
-        <div className="m-12 border-b-4">
-            <h2 className="m-4 font-mono font-semibold" >{description}</h2>
-            <div className="m-4 p-4 bg-gray-300">
-                <img className="m-4 w-16 float-right" src={MENU_LOGO_URL + imageId} />
-                <h3 className="font-bold font-sans">{name}</h3>
-                <h4 className="font-sans font-semibold">{itemAttribute.vegClassifier}</h4>
-                <h5 className="font-sans font-semibold">{"Rs." + price / 100+".00"}</h5>
-            </div>
+        <div className="w-6/12 mx-auto my-2 rounded-lg bg-slate-300 ">
+           <div className="flex justify-between cursor-pointer" onClick={handleClick}>
+           <label className="mx-4 text-lg font-bold">{listItem?.card?.card?.title}({listItem?.card?.card?.itemCards.length})</label>
+           <label>⬇️</label>
+           </div>
+           {listItemMenu.map((i)=>showItems && <StoreListItemsMenu key={i.card.info.id} itemData={i}/>)}
         </div>
     )
 }

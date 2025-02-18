@@ -33,3 +33,15 @@
  * 
  */
 // Header Component
+
+# 2 Types of routing in web apps
+- Client side routing
+- Server side routing
+
+# Redux Toolkit
+- Install @reduxjs/toolkit and react-redux
+- Build a redux store
+- Connect our store to the redux store
+- Slice
+- Dispatch(action)
+- Selector(Subscribing to the store)
